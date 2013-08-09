@@ -27,3 +27,9 @@ Initial release
 ----------------------------
 
 - Fixed issue with toolbar buttons when a gallery has less than 3 images
+
+
+3.0.5.1-tsc1 09.08.13 - Thorsten Schüller
+----------------------------
+
+- Added new setting parameter: captionAndToolbarAlwaysShowCaptions
