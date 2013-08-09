@@ -182,7 +182,10 @@
 				captionAndToolbarOpacity: 0.8,
 				captionAndToolbarShowEmptyCaptions: true,
 				getToolbar: PhotoSwipe.Toolbar.getToolbar,
-				
+
+				// If true the the caption toolbar will be displayed always
+				// Added by tsc, 2013-08-09 
+				captionAndToolbarAlwaysShowCaptions: false,
 				
 				// ZoomPanRotate
 				allowUserZoom: true, 
@@ -1106,6 +1109,11 @@
 			if (!Util.isNothing(this.toolbar)){
 				this.toolbar.setCaption(this.currentIndex);
 				this.toolbar.setToolbarStatus(this.currentIndex);
+			}
+
+			if (this.settings.captionAndToolbarAlwaysShowCaptions)
+			{
+				this.toolbar.showCaption();
 			}
 			
 			Util.Events.fire(this, {

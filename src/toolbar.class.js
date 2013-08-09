@@ -147,7 +147,11 @@
 			else{
 				Util.DOM.appendChild(this.captionEl, this.settings.target);
 			}
-			Util.DOM.hide(this.captionEl);
+			
+			if (!this.settings.captionAndToolbarAlwaysShowCaptions)
+			{
+				Util.DOM.hide(this.captionEl);
+			}
 			
 			this.captionContentEl = Util.DOM.createElement(
 				'div', 
@@ -298,7 +302,11 @@
 			});
 			
 			Util.Animation.fadeOut(this.toolbarEl, this.settings.fadeOutSpeed);
-			Util.Animation.fadeOut(this.captionEl, this.settings.fadeOutSpeed, this.fadeOutHandler);
+			
+			if (!this.settings.captionAndToolbarAlwaysShowCaptions)
+			{
+				Util.Animation.fadeOut(this.captionEl, this.settings.fadeOutSpeed, this.fadeOutHandler);
+			}
 			
 			this.isVisible = false;
 		
@@ -489,7 +497,11 @@
 		onFadeOut: function(){
 		
 			Util.DOM.hide(this.toolbarEl);
-			Util.DOM.hide(this.captionEl);
+			
+			if (!this.settings.captionAndToolbarAlwaysShowCaptions)
+			{
+				Util.DOM.hide(this.captionEl);
+			}
 			
 			Util.Events.fire(this, { 
 				type: PhotoSwipe.Toolbar.EventTypes.onHide, 
