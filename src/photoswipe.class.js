@@ -455,7 +455,15 @@
 				Util.Events.add(this.toolbar, Toolbar.EventTypes.onBeforeHide, this.toolbarBeforeHideHandler);
 				Util.Events.add(this.toolbar, Toolbar.EventTypes.onHide, this.toolbarHideHandler);
 			}
-		
+
+			// Fix for photoswipe in chrome on android:
+			// https://github.com/codecomputerlove/PhotoSwipe/issues/600
+			// http://stackoverflow.com/questions/16703157/android-4-chrome-hit-testing-issue-on-touch-events-after-css-transform
+			if (Util.Browser.android && Util.Browser.chrome)
+			{
+				Util.Events.add(window.document.body, 'touchstart', function(){});
+			}
+			
 		},
 		
 		
