@@ -12,7 +12,7 @@ Initial release
 3.0.2 04.11.11 - Ste Brennan
 ----------------------------
 
-- Fixed issue on iOS 5, first time an image is zoomed in, the zoomed image is hidden from view immediately. 
+- Fixed issue on iOS 5, first time an image is zoomed in, the zoomed image is hidden from view immediately.
 
 
 3.0.3 07.11.11 - Ste Brennan
@@ -30,6 +30,18 @@ Initial release
 
 
 3.0.5.1-tsc1 09.08.13 - Thorsten Schüller
-----------------------------
+-----------------------------------------
 
 - Added new setting parameter: captionAndToolbarAlwaysShowCaptions
+
+
+3.0.5.1-tsc2 30.11.13 - Thorsten Schüller
+-----------------------------------------
+
+- Added new setting parameter: captionAndToolbarAlwaysShowCaptions
+
+
+3.0.5.1-tsc3 17.09.18 - Thorsten Schüller
+-----------------------------------------
+
+- Fix issue with feature detection on an Andoid 9 device
